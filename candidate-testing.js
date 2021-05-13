@@ -58,7 +58,7 @@ if (candidateAnswers[i] === correctAnswers[i]) {
         console.log('Correct!');
         grade += 20;
   }else{
-    console.log(correctAnswers[i])
+    // console.log(correctAnswers[i])
     console.log("Incorrect!")
   
   }
