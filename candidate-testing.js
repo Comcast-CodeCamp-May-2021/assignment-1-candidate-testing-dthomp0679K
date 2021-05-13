@@ -3,10 +3,10 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName = input.question("Please write your name here:...\n");
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question1 = "Who was the first American woman in space ? ";
-let correctAnswer1 = "Sally Ride";
+let question = "Who was the first American woman in space ? ";
+let correctAnswer = "Sally Ride";
 // let candidateAnswer1 =(); 
 let question2 = ("true or False: 5000 meters == 5 kilometers ? ");
 let correctAnswer2 = "true";
@@ -21,63 +21,73 @@ let correctAnswer4 = "trajectory";
 let question5 = "What is the minimum crew size for the ISS? ";
 let correctAnswer5 = '3';
 // let candidateAnswer5 = 
-let questionArray = [question1, question2, question3, question4, question5];
-let answers = [];
+let questions = [question, question2, question3, question4, question5];
+let = candidateAnswer= "";
+let candidateAnswers = [];
 // console.log(questionArray);
-let answerArray = [correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
+let correctAnswers = [correctAnswer, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
 // console.log(answerArray);
+let candidateName = "";
+// let quizGrade = 0;
+ let grade = 0;
 
-let score = 0;
-for (let i = 0; i < questionArray.length; i++) {
-  // let answers = console.log(questionArray[i]);
-  answers.push(input.question(questionArray[i]))
-  if (answers[i] === answerArray[i]) {
-        console.log('Correct!');
-        score = score + 20;
-  }else{
-    console.log("Incorrect!")
-  }
-
-
-  }
 // console.log(answers);
-console.log("Your score is\n" + score) 
-  if (score >= 80) {
+
+function askForName() { 
+  
+  // TODO 1.1b: Ask for candidate's name //
+ candidateName = input.question("Please write your name here:...\n");
+}
+
+function askQuestion() {
+
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+for (let i = 0; i < questions.length; i++) {
+  // let answers = console.log(questionArray[i]);input.question(questions[i])
+  candidateAnswer = input.question(questions[i])
+  candidateAnswers.push(candidateAnswer)
+  console.log(candidateAnswer);
+    
+}
+}
+
+function gradeQuiz(candidateAnswers) {
+    for (let i = 0; i < candidateAnswers.length; i++) {
+    // if (candidateAnswer[i] === candidateAnswer[i])
+if (candidateAnswers[i] === correctAnswers[i]) {
+        console.log('Correct!');
+        grade += 20;
+  }else{
+    console.log(correctAnswers[i])
+    console.log("Incorrect!")
+  
+  }
+}
+  console.log("Your score is\n" + grade) 
+  if (grade >= 80) {
     console.log('congratulations you have passed!')
   }else{
     console.log('You did not pass. Please try again');
   }
-// function askForName() { 
-  
-  // TODO 1.1b: Ask for candidate's name //
 
-// }
-
-// function askQuestion() {
-
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-
-// }
-
-// function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  return grade;
+}
 
-
-//   let grade = grade + 20;
-  
-
-//   return grade;
-// }
-
-// function runProgram() {
-//   askForName();
+function runProgram() {
+  askForName();
   // TODO 1.1c: Ask for candidate's name //
   
-//   askQuestion();
-//   gradeQuiz(this.candidateAnswers);
-// }
+  askQuestion();
+  gradeQuiz(this.candidateAnswers)
+    // console.log()
+  //   if (gradeQuiz >= 80) {
+  //   console.log('congratulations you have passed!')
+  // }else{
+  //   console.log('You did not pass. Please try again');
+  // }
+}
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
