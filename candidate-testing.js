@@ -5,27 +5,27 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = "Who was the first American woman in space ? ";
+let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 // let candidateAnswer1 =(); 
-let question2 = ("true or False: 5000 meters == 5 kilometers ? ");
+let question2 = ("true or False: 5000 meters == 5 kilometers? ");
 let correctAnswer2 = "true";
 // let candidateAnswer2 = ();
-let question3 = "(5+3)/2*10 = ? "
+let question3 = "(5+3)/2*10 =? "
 let correctAnswer3 = '40';
   
 // let candidateAnswer3 
 let question4 = "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ";
-let correctAnswer4 = "trajectory";
+let correctAnswer4 = "Trajectory";
 // let candidateAnswer4 
 let question5 = "What is the minimum crew size for the ISS? ";
 let correctAnswer5 = '3';
 // let candidateAnswer5 = 
-let questions = [question, question2, question3, question4, question5];
+const questions = [question, question2, question3, question4, question5];
 let = candidateAnswer= "";
 let candidateAnswers = [];
 // console.log(questionArray);
-let correctAnswers = [correctAnswer, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
+const correctAnswers = [correctAnswer, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
 // console.log(answerArray);
 let candidateName = "";
 // let quizGrade = 0;
