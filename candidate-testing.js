@@ -1,6 +1,6 @@
 const input = require('readline-sync');
 
-// TODO 2: modify your quiz app to ask 5 questions //
+// TODO 2: modify your quiz app to ask 5 questions /
 
 // TODO 1.1a: Define candidateName // 
 
@@ -8,10 +8,10 @@ const input = require('readline-sync');
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 // let candidateAnswer1 =(); 
-let question2 = ("true or False: 5000 meters == 5 kilometers? ");
+let question2 = ("True or false: 5 kilometer == 5000 meters? ");
 let correctAnswer2 = "true";
 // let candidateAnswer2 = ();
-let question3 = "(5+3)/2*10 =? "
+let question3 = "(5 + 3)/2 * 10 = ? "
 let correctAnswer3 = '40';
   
 // let candidateAnswer3 
@@ -60,8 +60,7 @@ if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
         grade += 1;
   }else{
     // console.log(correctAnswers[i])
-    console.log("Incorrect!")
-  
+    console.log("Incorrect!")  
   }
 }
   const total = (grade/questions.length) * 100;
