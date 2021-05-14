@@ -36,7 +36,8 @@ let candidateName = "";
 function askForName() { 
   
   // TODO 1.1b: Ask for candidate's name //
- candidateName = input.question("Please write your name here:...\n");
+ candidateName = input.question("Please write your name here:...\n")
+  console.log("Candidate Name: " + candidateName);
 }
 
 function askQuestion() {
@@ -46,7 +47,7 @@ for (let i = 0; i < questions.length; i++) {
   // let answers = console.log(questionArray[i]);input.question(questions[i])
   candidateAnswer = input.question(questions[i])
   candidateAnswers.push(candidateAnswer)
-  console.log(candidateAnswer);
+  console.log('Your Answer: ' + candidateAnswer);
     
 }
 }
@@ -54,17 +55,19 @@ for (let i = 0; i < questions.length; i++) {
 function gradeQuiz(candidateAnswers) {
     for (let i = 0; i < candidateAnswers.length; i++) {
     // if (candidateAnswer[i] === candidateAnswer[i])
-if (candidateAnswers[i] === correctAnswers[i]) {
+if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
         console.log('Correct!');
-        grade += 20;
+        grade += 1;
   }else{
     // console.log(correctAnswers[i])
     console.log("Incorrect!")
   
   }
 }
-  console.log("Your score is\n" + grade) 
-  if (grade >= 80) {
+  const total = (grade/questions.length) * 100;
+  
+  console.log("Your score is\n" + total + "%"); 
+  if (total >= 80) {
     console.log('congratulations you have passed!')
   }else{
     console.log('You did not pass. Please try again');
