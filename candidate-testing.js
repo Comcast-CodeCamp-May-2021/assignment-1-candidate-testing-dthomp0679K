@@ -74,7 +74,7 @@ if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
 
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  return grade;
+  return total;
 }
 
 function runProgram() {
