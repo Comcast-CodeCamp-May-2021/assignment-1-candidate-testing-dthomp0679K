@@ -53,6 +53,7 @@ for (let i = 0; i < questions.length; i++) {
 }
 
 function gradeQuiz(candidateAnswers) {
+    grade = 0;
     for (let i = 0; i < candidateAnswers.length; i++) {
     // if (candidateAnswer[i] === candidateAnswer[i])
 if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
@@ -63,7 +64,7 @@ if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
     console.log("Incorrect!")  
   }
 }
-  const total = (grade/questions.length) * 100;
+  const total = (grade/5) * 100;
   
   console.log("Your score is\n" + total + "%"); 
   if (total >= 80) {
